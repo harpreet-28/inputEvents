@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>QUESTION 10</title>
+</head>
+
+<body>
+    <div id="div1" style="float:left">
+        <input type="radio" id="radioBtn" name="">Radio Button
+        <br>
+        <input type="checkbox" id="chkBox" name="">Check Box
+        <br>
+        <select id="selection">
+            <option>One</option>
+            <option>Two</option>
+            <option>Three</option>
+        </select>
+        <br>
+        <button id="btn">CLICK HERE</button>
+    </div>
+    <div id="div2" style="float:right">
+        <p id="para1" style="height:20px; width: 180px;"></p>
+        <p id="para2" style="height:20px; width: 150px;"></p>
+        <p id="para3" style="height:20px; width: 150px;"></p>
+    </div>
+    <script type="text/javascript">
+    var _id = function _id(id) {
+        return document['getElementById'](id);
+    }
+
+    var radioButton = _id('radioBtn');
+    var checkbox = _id('chkBox');
+    var selection = _id('selection');
+    var button = _id('btn');
+    var para1 = _id('para1');
+    var para2 = _id('para2');
+    var para3 = _id('para3');
+    button['addEventListener']('click', function() {
+        if (radioButton.checked) {
+            var print1 = document.createTextNode("Radio button is checked.");
+            para1.appendChild(print1);
+        }
+         if (checkbox.checked) {
+            var print2 = document.createTextNode("Checkbox is checked.");
+            para2.appendChild(print2);
+        }
+         if (selection.option = true) {
+
+            var print3 = document.createTextNode(selection.value);
+            para3.appendChild(print3);
+        }
+    })
+    </script>
+</body>
+
+</html>
